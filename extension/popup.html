@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+</head>
+<body>
+<span>hi twitter</span>
+<button onclick="f()">click</button>
+</body>
+<script src="jquery-3.6.3.min.js"></script>
+<script>
+    function f() {
+         $.ajax({
+            url:' http://127.0.0.1:5000/api/language-detection',
+            method:'post',
+            type:'POST',
+            data:JSON.stringify({tweet_text:"I am your father"}),
+            success:function (data) {
+                console.log(data)
+            },
+            contentType: 'application/json',
+        })
+    }
+</script>
+</html>

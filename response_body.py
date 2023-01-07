@@ -12,7 +12,7 @@ class BaseLanguage():
 
 
 class ResponseBody():
-    map = ['NEGTIVE', 'NEUTRAL', 'POSITIVE']
+    map = ['NEGATIVE', 'NEUTRAL', 'POSITIVE']
 
     def __init__(self, result, text):
         self.result = result
