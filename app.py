@@ -39,4 +39,4 @@ if __name__ == '__main__':
     base_language_pipeline = pipeline("text-classification", model="papluca/xlm-roberta-base-language-detection")
     tokenizers, model = load_model('./model/token', './model/weight')
     CORS(app)
-    app.run(host='0.0.0.0', port=5000, ssl_context='adhoc')
+    app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))

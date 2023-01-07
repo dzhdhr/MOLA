@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((obj, sender, response) => {
         //     console.log(data)
         // })
         $.ajax({
-            url: ' https://192.168.1.51:80/api/language-detection',
+            url: 'https://34.134.160.206:5000/api/language-detection',
             method: 'post',
             type: 'POST',
             data: JSON.stringify({tweet_text: result[i].innerText}),
@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener((obj, sender, response) => {
                 console.log(data['is_english'])
                 if (data['is_english']) {
                     $.ajax({
-                        url: 'https://192.168.1.51:80/api/sentiment-score',
+                        url: 'https://34.134.160.206:5000/api/sentiment-score',
                         method: 'post',
                         type: 'POST',
                         data: JSON.stringify({tweet_text: data['tweet_text']}),
