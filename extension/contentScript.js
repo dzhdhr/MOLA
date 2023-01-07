@@ -44,12 +44,12 @@ chrome.runtime.onMessage.addListener((obj, sender, response) => {
                             }
                             let time = result[i].parentNode.parentNode.parentNode.children[0].children[0].children[0].children[0].children[0].children[0].children
                             let place = time[time.length - 1].children[0]
-                            console.log(place);
+                            //console.log(place);
                             const spanElement = document.createElement("span");
                             spanElement.style.color = 'grey';
                             spanElement.textContent = text;
                             place.appendChild(spanElement)
-                            console.log(response)
+                            //console.log(response)
                         }
                     })
 
@@ -66,7 +66,7 @@ chrome.runtime.onMessage.addListener((obj, sender, response) => {
     // let text =result[0].parentNode.parentNode.parentNode.getElementsByTagName('time')[0].innerText
 
     console.log()
-    alert(type);
+    //alert("Getting Result");
 
 
 })
