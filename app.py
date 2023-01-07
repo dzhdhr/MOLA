@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 @app.route('/api/language-detection', methods=['POST'])
 def language_detection():
-
     tweet_text = request.json.get('tweet_text')
     print(tweet_text)
     if tweet_text is None:
@@ -40,4 +39,4 @@ if __name__ == '__main__':
     base_language_pipeline = pipeline("text-classification", model="papluca/xlm-roberta-base-language-detection")
     tokenizers, model = load_model('./model/token', './model/weight')
     CORS(app)
-    app.run()
+    app.run(host='0.0.0.0', port=80)
